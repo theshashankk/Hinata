@@ -1,0 +1,19 @@
+from konfig import API_HASH, API_ID, BOT_TOKEN, STRING_SESSION
+from pyrogram import Client
+from pytgcalls import PyTgCalls
+
+bot = Client(
+    ":memory:",
+    API_ID,
+    API_HASH,
+    bot_token=BOT_TOKEN,
+    plugins={"root": "core"},
+)
+
+user = Client(
+    STRING_SESSION,
+    api_id=API_ID,
+    api_hash=API_HASH,
+)
+
+call_py = PyTgCalls(user, overload_quiet_mode=True)
