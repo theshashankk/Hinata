@@ -1,4 +1,4 @@
-from konfig import API_HASH, API_ID, BOT_TOKEN, STRING_SESSION
+from Konfig import API_HASH, API_ID, BOT_TOKEN, STRING_SESSION
 from pyrogram import Client
 from pytgcalls import PyTgCalls
 
