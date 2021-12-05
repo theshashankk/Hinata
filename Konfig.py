@@ -4,7 +4,7 @@ from dotenv import load_dotenv as envv
 if os.path.exists('local.env'):
   envv('local.env')
   
-load_dotenv()
+envv()
 admins = {}
 
 STRING_SESSION = os.environ.get('STRING_SESSION', '')
