@@ -58,4 +58,6 @@ async def kkplay(c: Client, m: Message):
     ]
   )
   if m.sender_chat:
-    return await m.reply_text("You're an __Anonymous admin__!!\n\n**Revert back to use me")
+    await m.reply_text("You're an __Anonymous admin__!!\n\n**Revert back to use me**")
+  else:
+    await m.reply_text('__Work in process__')
