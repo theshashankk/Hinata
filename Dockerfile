@@ -1,6 +1,8 @@
 FROM nikolaik/python-nodejs:python3.10-nodejs17
 RUN apt-get update \
     && apt-get install -y \
+    && apt-get install nodejs \
+    && apt-get install npm \
     && apt-get install ffmpeg -y /*
 COPY . /app
 WORKDIR /app
