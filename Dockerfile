@@ -1,4 +1,4 @@
-FROM nikolaik/1python3.10-nodejs17-bullseye
+FROM nikolaik/python3.10-nodejs17-bullseye
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ffmpeg \
     && apt-get clean \
