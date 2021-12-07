@@ -61,3 +61,6 @@ async def kkplay(c: Client, m: Message):
     await m.reply_text("You're an __Anonymous admin__!!\n\n**Revert back to use me**")
   else:
     await m.reply_text('__Work in process__')
+    
+
+print('[PLUGIN] - IMPORTED PLAY')
