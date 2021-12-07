@@ -1,6 +1,7 @@
 {
     "name": "Hinata",
     "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by pytgcalls and pyrogram",
+    "logo": "https://telegra.ph/file/1873942c3340178da0eb4.jpg",
     "keywords": [
         "pytgcalls",
         "pyrogram"
