@@ -1,1 +1,1 @@
-worker: python3 main.py
+hinata: python3 main.py
