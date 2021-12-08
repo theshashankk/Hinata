@@ -1,0 +1,57 @@
+{
+  "name": "Hinata X bot",
+  "description": "A Telegram Music bot",
+  "repository": "https://github.com/theshashankk/Hinata",
+  "logo": "https://telegra.ph/file/1873942c3340178da0eb4.jpg",
+  "keywords": [
+  "python3",
+  "pyrogram"
+  ],
+  "repository": "https://github.com/theshashankk/Hinata",
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "A Bot's token from Botfather",
+      "value": "",
+      "required": true
+    },
+    "STRING_SESSION": {
+      "description": "Enter your pyrogram string session",
+      "value": "60",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "Bot username",
+      "value": "",
+      "required": true
+    }
+  },
+  "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
