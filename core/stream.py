@@ -5,6 +5,7 @@ from Konfig import BOT_USERNAME, IMG_1, IMG_2
 from temp.filters import command, other_filters
 from temp.queues import QUEUE, add_to_queue
 from temp.client_base import call_py, user
+from temp.client_base import bot as b
 from pyrogram import Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
