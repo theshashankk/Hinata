@@ -52,13 +52,16 @@ async def kkplay(client, m: Message):
   keyboard = InlineKeyboardMarkup(
     [
       [
-        InlinekeyboardButton('⛓️ Open Menu', callback_data='cbmenu')
+        InlineKeyboardButton('⛓️ Open Menu', callback_data='cbmenu')
       ],[
         InlineKeyboardButton('🚧 Close menu', callback_data='cls')
       ]
     ]
   )
-  await m.reply_text('__Work in process__')
+  if m.sender_chat:
+    await m.reply_text("You're an __Anonymous admin__!!\n\n**Revert back to use me**")
+  else:
+    await m.reply_text('__Work in process__')
     
 
 print('[PLUGIN] - IMPORTED PLAY')
