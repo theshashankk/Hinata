@@ -45,7 +45,7 @@ async def ytdl(link):
 
 
 @b.on_message(filters.command("play") & ~filters.edited)
-async def kkplay(c: Client, m: Message):
+async def kkplay(client, m: Message):
   replied = m.reply_to_message
   chat_id = m.chat.id
   keyboard = InlineKeyboardMarkup(
