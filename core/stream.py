@@ -6,7 +6,7 @@ from temp.filters import command, other_filters
 from temp.queues import QUEUE, add_to_queue
 from temp.client_base import call_py, user
 from temp.client_base import bot as b
-from pyrogram import Client
+from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType
