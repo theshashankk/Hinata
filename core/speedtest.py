@@ -21,7 +21,7 @@ def bytes(size: float) -> str:
     return "{:.2f} {}B".format(size, power_dict[t_n])
 
 @b.on_message(filters.command("speedtest") & ~filters.edited)
-async def speedtester(m: Message):
+async def speedtester(_, hinata):
   m = await message.reply_text("Running Speed test")
   try:
     test = speedtest.Speedtest()
