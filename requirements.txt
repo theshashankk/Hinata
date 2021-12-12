@@ -14,7 +14,7 @@ aiohttp
 requests
 heroku3
 motor
-yt-dlp
+git+https://github.com/deviilboi/downloader@master
 psutil
 future
 wget
