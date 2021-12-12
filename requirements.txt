@@ -18,3 +18,4 @@ git+https://github.com/deviilboi/downloader@master
 psutil
 future
 wget
+speedtest-cli
