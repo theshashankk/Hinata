@@ -33,7 +33,7 @@ async def speedtester(client ,message):
     test.results.share()
     result = test.results.dict()
   except Exception as e:
-    return m.edit(e)
+    return m.edit_text(e)
   m = await m.edit("Sharing SpeedTest Results")
   path = wget.download(result["share"])
   output = f"""**Speedtest Results**
