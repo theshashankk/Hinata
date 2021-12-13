@@ -46,7 +46,7 @@ async def ytdl(link):
 
 
 @b.on_message(filters.command("play") & ~filters.edited)
-async def kkplay(client, m: Message):
+async def kkplay(client: Client, m: Message):
   replied = m.reply_to_message
   chat_id = m.chat.id
   keyboard = InlineKeyboardMarkup(
@@ -60,8 +60,11 @@ async def kkplay(client, m: Message):
   )
   if m.sender_chat:
     await m.reply_text("You're an __Anonymous admin__!!\n\n**Revert back to use me**")
-  else:
-    await m.reply_text('__Work in process__')
-    
+  try:
+    aing = await client.get_me()
+  except Exception as e:
+    await m.reply_text(e)
+  await m.reply_text('**WORK IN PROCESS**')
+        
 
 print('[PLUGIN] - IMPORTED PLAY')
