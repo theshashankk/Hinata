@@ -63,8 +63,11 @@ async def kkplay(client: Client, m: Message):
   try:
     aing = await client.get_me()
   except Exception as e:
-    await m.reply_text(e)
-  await m.reply_text('**WORK IN PROCESS**')
-        
-
-print('[PLUGIN] - IMPORTED PLAY')
+    return await m.reply_text(e)
+  a = await c.get_chat_member(chat_id, aing.id)
+  if a.status != "administrator":
+    await m.reply_text(
+        f"To use me, I need to be an **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+    )
+  else:
+    await m.reply_text('__WORK IN PROCESS')
